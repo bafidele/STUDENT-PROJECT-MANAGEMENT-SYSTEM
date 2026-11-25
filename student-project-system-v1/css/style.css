@@ -1,0 +1,31 @@
+:root {
+  --ink: #16324f;
+  --green: #16a085;
+  --paper: #f6f8fa;
+  --line: #dfe7ed;
+  font-family: "Bookman Old Style";
+  color: var(--ink);
+  background: var(--paper);
+}
+* { box-sizing: border-box; font-family: inherit; }
+body { margin: 0; }
+
+.site-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 6vw; background: var(--ink); color: #fff;
+}
+.site-header a { color: inherit; text-decoration: none; margin-left: 18px; }
+.site-header .brand { margin-left: 0; font-weight: 800; letter-spacing: .08em; }
+
+.container { max-width: 860px; margin: 0 auto; padding: 70px 6vw; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .7rem; font-weight: 800; color: var(--green); }
+h1 { font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1; letter-spacing: -.06em; }
+.lede { color: #667788; font-size: 1.1rem; }
+
+.button {
+  display: inline-block; padding: 11px 16px; border-radius: 8px; border: 0; cursor: pointer;
+  background: var(--green); color: #fff; text-decoration: none; font-weight: 800; font-size: 1rem;
+}
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px; }

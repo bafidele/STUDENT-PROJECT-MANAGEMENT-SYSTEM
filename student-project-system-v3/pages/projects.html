@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPMS · Projects</title>
+  <link rel="stylesheet" href="../css/style.css?v=bookman-old-style-1">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">SPMS</a>
+    <nav aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Projects</h1>
+
+    <div class="toolbar">
+      <input id="project-search" type="search" placeholder="Search projects…" aria-label="Search projects">
+      <select id="status-filter" aria-label="Filter by status">
+        <option value="">All statuses</option>
+        <option>Proposed</option>
+        <option>In progress</option>
+        <option>Completed</option>
+        <option>Archived</option>
+      </select>
+      <p class="count">Showing <strong id="project-count">0</strong> project(s)</p>
+      <button id="add-project-btn" class="button">+ Add project</button>
+    </div>
+
+    <section id="project-grid" class="card-grid"></section>
+
+    <div id="project-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <h2 id="modal-title">New project</h2>
+        <form id="project-form">
+          <input type="hidden" name="id">
+          <label>Title
+            <input name="title" required minlength="3">
+          </label>
+          <label>Status
+            <select name="status">
+              <option>Proposed</option>
+              <option>In progress</option>
+              <option>Completed</option>
+              <option>Archived</option>
+            </select>
+          </label>
+          <label>Description
+            <textarea name="description" rows="3" required minlength="10"></textarea>
+          </label>
+          <div class="modal-actions">
+            <button type="button" data-close class="button-ghost">Cancel</button>
+            <button class="button">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="../js/projects-ui.js"></script>
+</body>
+</html>

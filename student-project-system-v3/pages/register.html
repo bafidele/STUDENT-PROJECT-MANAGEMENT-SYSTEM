@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPMS · Register</title>
+  <link rel="stylesheet" href="../css/style.css?v=bookman-old-style-1">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">SPMS</a>
+    <nav aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">Create account</p>
+    <h1>Register a project</h1>
+
+    <form id="registration-form" novalidate>
+      <label>Full name
+        <input name="name" required minlength="3">
+      </label>
+      <label>Email
+        <input name="email" type="email" required>
+      </label>
+      <label>Password
+        <input name="password" type="password" required minlength="8">
+      </label>
+      <button class="button">Register</button>
+      <p id="form-message" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="../js/validation.js" defer></script>
+</body>
+</html>
